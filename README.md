@@ -3,17 +3,17 @@ RoboRouter
 
 RoboRouter is a little utility library to manage your start-up activities in a efficient and easy way.
 A typical application have a Walkthrough activity and/or a Login activity that are shown to the user
-only on time, so why adding code in your Main activity to manage this over and over again?
+only one time, so why adding code in your Main activity to manage this over and over again?
 
-Prevent filling your Main activity with code to protect the initialize of the application when for
-the first case. Prevent the creation of Singletons, inject of views or any component that the user
+Prevent filling your Main activity with code to protect the initialize of the application for
+the first start-up. Prevent the creation of Singletons, inject of views or any component that the user
 will not see until he look at the Walkthrough and/or login in your app.
 
 How to use it?
 --------------
 
 The first step is to add create your activities, add it to the AndroidManifest.xml and make Login
-and Main activities disabled by default. It's important that all three of your activities (or two
+and Main activities disabled by default. It's important that all three activities (or two
 if your app doesn't have a walkthrough or login) have the launcher intent filter.
 
 ```xml
