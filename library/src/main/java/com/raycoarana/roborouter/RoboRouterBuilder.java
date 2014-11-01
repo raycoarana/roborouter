@@ -44,6 +44,7 @@ public class RoboRouterBuilder {
 	 * AndroidManifest.xml with an Intent-Filter for LAUNCHER action.
 	 * @param accountType account type to look for, if no account is found, the login screen is activated
 	 *
+     * @return this RoboRouterBuilder isntance
 	 */
 	public RoboRouterBuilder addLoginScreen(Class<? extends Activity> loginActivityClass, String accountType) {
 		mLoginActivityClass = loginActivityClass;
@@ -59,6 +60,7 @@ public class RoboRouterBuilder {
 	 * @param walkthroughActivityClass class of the walkthrough Activity screen. This activity must have an activity-alias in the
 	 * AndroidManifest.xml with an Intent-Filter for LAUNCHER action.
 	 *
+     * @return this RoboRouterBuilder isntance
 	 */
 	public RoboRouterBuilder addWalkthroughScreen(Class<? extends Activity> walkthroughActivityClass) {
 		mWalkthroughActivityClass = walkthroughActivityClass;
@@ -70,12 +72,20 @@ public class RoboRouterBuilder {
 	 *
 	 * @param mainActivityClass class of the walkthrough Activity screen. This activity must have an activity-alias
 	 * in the AndroidManifest.xml with an Intent-Filter for LAUNCHER action.
+     *
+     * @return this RoboRouterBuilder isntance
 	 */
 	public RoboRouterBuilder addMainScreen(Class<? extends Activity> mainActivityClass) {
 		mMainActivityClass = mainActivityClass;
 		return this;
 	}
 
+    /**
+     * Builds a RoboRouter instance. RoboRouter is a singleton so any new call to this method will
+     * create a new RoboRouter singleton.
+     *
+     * @return the created RoboRouter
+     */
 	public RoboRouter build() {
 		checkMainActivity();
 		checkAtLeastOtherActivity();
