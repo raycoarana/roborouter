@@ -106,6 +106,22 @@ the method resetWalkthrough().
 
 Take a look at the Sample project!
 
+Download
+--------
+
+Download via Maven:
+```xml
+<dependency>
+  <groupId>com.raycoarana</groupId>
+  <artifactId>roborouter</artifactId>
+  <version>1.0.2</version>
+</dependency>
+```
+or Gradle:
+```groovy
+compile 'com.raycoarana:roborouter:1.0.2'
+```
+
 License
 -------
 
