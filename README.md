@@ -114,12 +114,12 @@ Download via Maven:
 <dependency>
   <groupId>com.raycoarana</groupId>
   <artifactId>roborouter</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
 </dependency>
 ```
 or Gradle:
 ```groovy
-compile 'com.raycoarana:roborouter:1.0.2'
+compile 'com.raycoarana:roborouter:1.0.3'
 ```
 
 License
