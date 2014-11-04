@@ -3,6 +3,7 @@ package com.raycoarana.roborouter;
 import android.app.Activity;
 import android.app.Application;
 import android.content.ComponentName;
+import android.content.Context;
 
 /*
     Copyright 2014 Rayco Araña
@@ -91,12 +92,20 @@ public class RoboRouterBuilder {
 		checkAtLeastOtherActivity();
 
 		RoboRouter roboRouter = new RoboRouter(mApplication, mAccountType);
-		roboRouter.mLoginActivityName = new ComponentName(mApplication, mLoginActivityClass);
-		roboRouter.mMainActivityName = new ComponentName(mApplication, mMainActivityClass);
-		roboRouter.mWalkthroughActivityName = new ComponentName(mApplication, mWalkthroughActivityClass);
+		roboRouter.mLoginActivityName = buildComponentName(mApplication, mLoginActivityClass);
+		roboRouter.mMainActivityName = buildComponentName(mApplication, mMainActivityClass);
+		roboRouter.mWalkthroughActivityName = buildComponentName(mApplication, mWalkthroughActivityClass);
 		RoboRouter.sInstance = roboRouter;
 		return roboRouter;
 	}
+
+    private ComponentName buildComponentName(Context context, Class<? extends Activity> activityClass) {
+        if(activityClass != null) {
+            return new ComponentName(context, activityClass);
+        } else {
+            return null;
+        }
+    }
 
 	private void checkMainActivity() {
 		if(mMainActivityClass == null) {

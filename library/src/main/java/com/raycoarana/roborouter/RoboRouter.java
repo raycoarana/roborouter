@@ -30,8 +30,8 @@ import android.os.Bundle;
 
 public class RoboRouter {
 
-	private static final String ROBO_ROUTER_PREFERENCES = "robo_router_preferences";
-	private static final String KEY_WALKTHROUGH_ALREADY_SHOWN = "key_walkthrough_already_shown";
+	static final String ROBO_ROUTER_PREFERENCES = "robo_router_preferences";
+	static final String KEY_WALKTHROUGH_ALREADY_SHOWN = "key_walkthrough_already_shown";
 
 	static RoboRouter sInstance;
 
