@@ -1,0 +1,7 @@
+language: android 
+android: 
+    components: 
+        - build-tools-21.1.0
+        - android-21
+script:
+    - gradle test
