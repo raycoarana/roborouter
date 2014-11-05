@@ -29,9 +29,9 @@ FileCollection getJacocoSrcDirs(List projects) {
 // generate coverage report for this project and all its project dependencies
 task jacocoTestReport(type: JacocoReport, dependsOn: test) {
     reports {
-        xml.enabled false
-        csv.enabled false
-        html.destination "${buildDir}/reports/coverage"
+        xml.enabled = true
+        csv.enabled = false
+        html.destination = "${buildDir}/reports/coverage"
     }
 
     // TODO: automatically get project dependencies recursively

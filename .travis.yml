@@ -7,3 +7,5 @@ before_script:
     - chmod +x gradlew
 script:
     - ./gradlew :library:check
+after_success:
+    - ./gradlew jacocoTestReport coveralls

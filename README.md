@@ -1,6 +1,9 @@
 RoboRouter
 ==========
 
+[![Build Status](https://travis-ci.org/raycoarana/roborouter.svg?branch=master)](https://travis-ci.org/raycoarana/roborouter)
+[![Coverage Status](https://coveralls.io/repos/raycoarana/roborouter/badge.png)](https://coveralls.io/r/raycoarana/roborouter)
+
 RoboRouter is a little utility library to manage your start-up activities in a efficient and easy way.
 A typical application have a Walkthrough activity and/or a Login activity that are shown to the user
 only one time, so why adding code in your Main activity to manage this over and over again?

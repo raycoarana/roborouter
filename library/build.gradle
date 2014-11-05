@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'robolectric'
+apply plugin: 'com.github.kt3k.coveralls'
 apply from: '../scripts/gradle-mvn-push.gradle'
 apply from: '../scripts/idea.gradle'
 apply from: '../scripts/jacoco.gradle'
