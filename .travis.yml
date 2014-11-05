@@ -3,5 +3,9 @@ android:
     components: 
         - build-tools-21.1.0
         - android-21
+before_install:
+    - chmod +x gradlew
+install:
+    - ./gradlew build
 script:
     - ./gradlew test
