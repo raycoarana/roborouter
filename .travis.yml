@@ -4,4 +4,4 @@ android:
         - build-tools-21.1.0
         - android-21
 script:
-    - gradlew test
+    - ./gradlew test
